@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+.App{
+  font-family: "Nunito Sans", sans-serif;
+  font-style: normal;
+  margin:0
+  
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.home h2{
+  font-family: "Playfair Display", serif;
+  font-style: normal;
+}
+.food ul{
+  font-family: "Nunito Sans", sans-serif;
+  font-style: normal;
+}
+.food h4{
+  font-family: "Playfair Display", serif;
+  font-style: normal;
+}
+.home h4{
+  font-family: "Playfair Display", serif;
+  font-style: normal;
+}
+.footer h6{
+  font-family: "Playfair Display", serif;
+  font-style: normal;
+}
+.carousel h6{
+  font-family: "Playfair Display", serif;
+  font-style: normal;
+}
+.carousel h4{
+  font-family: "Playfair Display", serif;
+  font-style: normal;
+}
+.content h4{
+  font-family: "Playfair Display", serif;
+  font-style: normal;
+}
+
