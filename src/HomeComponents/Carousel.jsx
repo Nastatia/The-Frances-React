@@ -44,7 +44,7 @@ const Carousel = () => {
         <div className="carousel max-w-lg mx-auto px-4 pt-8 py-8 ">
             <Slider {...settings}>
                 <div className='mb-5 text-left flex flex-row items-start'>
-                    <img src={'/Assets/Customer 1.jpg'} alt="Customer1" className="mx-auto h-[100px] w-[100px] sm:h-[100px] sm:w-[100px] rounded-full  "/>
+                    <img src={'/Assets/Customer 1.jpg'} alt="Customer1" className="mx-auto h-[100px] w-[100px] sm:h-[100px] sm:w-[100px] rounded-full ml-2 "/>
                     <h6 className="text-lg sm:text-xl mb-3 font-bold text-rose-600 pt-2">Chiamaka E.</h6>
                     <p className="text-sm sm:text-base pt-4 text-justify">
                         "A true gem! The Frances exceeded all our expectations. The ambiance was cozy and elegant, 
@@ -53,8 +53,8 @@ const Carousel = () => {
                         they do. We can't wait to come back for another memorable meal!"
                     </p>
                 </div>
-                <div className='mb-5 text-left'>
-                    <img src={'/Assets/Customer2.jpg'} alt="Customer2" className="mx-auto h-[100px] w-[100px] sm:h-[100px] sm:w-[100px] rounded-full"/>
+                <div className='mb-5 text-left flex flex-row'>
+                    <img src={'/Assets/Customer2.jpg'} alt="Customer2" className="mx-auto h-[100px] w-[100px] sm:h-[100px] sm:w-[100px] rounded-full ml-2"/>
                     <h6 className="text-lg sm:text-xl mb-3 font-bold text-rose-600 pt-2">Jasmine G.</h6>
                     <p className="text-sm sm:text-base pt-4 text-justify">
                         "A true gem! The Frances exceeded all our expectations. The ambiance was cozy and elegant, 
@@ -63,8 +63,8 @@ const Carousel = () => {
                         they do. We can't wait to come back for another memorable meal!"
                     </p>
                 </div>
-                <div className='mb-5 text-left'>
-                    <img src={'/Assets/Customer3.jpg'} alt="Customer3" className="mx-auto h-[100px] w-[100px] sm:h-[100px] sm:w-[100px] rounded-full"/>
+                <div className='mb-5 text-left flex flex-row'>
+                    <img src={'/Assets/Customer3.jpg'} alt="Customer3" className="mx-auto h-[100px] w-[100px] sm:h-[100px] sm:w-[100px] rounded-full ml-2"/>
                     <h6 className="text-lg sm:text-xl mb-3 font-bold text-rose-600 pt-2">George M.</h6>
                     <p className="text-sm sm:text-base pt-4 text-justify">
                         "Absolutely fantastic! From the moment we walked in, we were greeted with warm smiles and impeccable service.
