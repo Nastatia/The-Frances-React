@@ -1,6 +1,7 @@
 import Carousel from "./Carousel";
 import EventCarousel from "./EventsCarousel";
 import Food from "./Food";
+import { Link } from 'react-router-dom';
 
 function Content() {
     const background = {
@@ -62,7 +63,9 @@ function Content() {
 
 
         <div className="mt-6">
-            <button className="px-6 py-3 text-[11px] lg:text-sm text-white rounded-3xl bg-rose-600 font-bold hover:bg-rose-700 transition duration-300">MORE GALLERIES</button>
+            <Link to="/gallery">
+               <button className="px-6 py-3 text-[11px] lg:text-sm text-white rounded-3xl bg-rose-600 font-bold hover:bg-rose-700 transition duration-300">MORE GALLERIES</button>
+            </Link>
         </div>
     </div>
 </div>
@@ -83,9 +86,11 @@ function Content() {
                             top-notch service are the perfect ingredients for a fantastic time.</p>
                     </div>
                     <div className="mt-8">
-                        <button className="px-6 py-3 text-sm lg:text-[10px] text-white rounded-3xl bg-rose-600 font-bold hover:bg-rose-700 transition duration-300">
-                            BOOK A TABLE
-                        </button>
+                       <Link to="/events"> 
+                          <button className="px-6 py-3 text-sm lg:text-[10px] text-white rounded-3xl bg-rose-600 font-bold hover:bg-rose-700 transition duration-300">
+                               BOOK A TABLE
+                         </button>
+                     </Link>
                     </div>
                 </div>
             </div>

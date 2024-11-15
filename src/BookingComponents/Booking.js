@@ -21,12 +21,41 @@ const Booking = () => {
     e.preventDefault();
     console.log('Form submitted');
   };
+  const [selectedValue, setSelectedValue] = useState("");
+  const [options, setOptions] = useState(["2", "4", "6", "8", "10", "12", "14", "16", "18", "20"]);
+ 
+
+  const handleSelectChange = (e) => {
+    let value = e.target.value;
+
+    if (value === "other") {
+      // Prompt the user to enter a custom number
+      const customValue = prompt("Enter the number of persons (1 - 50):");
+
+      // Check if the input is within the allowed range and is a number
+      if (customValue && !isNaN(customValue) && customValue >= 1 && customValue <= 50) {
+        value = customValue;
+
+        // Add the custom value to options if it doesn't already exist
+        if (!options.includes(customValue)) {
+          setOptions([...options, customValue]);
+        }
+      } else {
+        alert("Please enter a valid number between 1 and 50.");
+        return; // Stop further actions if the input is invalid
+      }
+    }
+
+    setSelectedValue(value);
+  };
+  
     const view = {
         backgroundImage:"url('/home.png')",
         backgroundSize: 'cover',
         backgroundAttachment: 'fixed',
         
       }
+  
     return ( 
         <section>
             <div className=" h-screen bg-center " style={view}>
@@ -79,11 +108,13 @@ const Booking = () => {
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className="flex flex-col sm:flex-row gap-4">
           <input 
+          required
             type="text" 
             placeholder="Your Name" 
             className="w-full p-3 border border-black bg-inherit rounded-lg placeholder-black opacity-80" 
           />
           <input 
+          required
             type="email" 
             placeholder="Your Email" 
             className="w-full p-3 border border-black bg-inherit rounded-lg placeholder-black opacity-80" 
@@ -91,39 +122,48 @@ const Booking = () => {
         </div>
 
         <input 
+        required
           type="text" 
           placeholder="Subject" 
           className="w-full p-3 border border-black bg-inherit rounded-lg placeholder-black opacity-80" 
         />
 
-        <div className="flex flex-col sm:flex-row gap-4">
+        <div className="flex flex-col sm:flex-row gap-4 w-full">
         
-          <DatePicker
-            selected={startDate}
-            onChange={handleDateChange}
-            placeholderText="Pick a date"
-            className="w-full sm:w-1/2 p-3 border border-black rounded-lg bg-inherit focus:outline-none  placeholder-black opacity-80"
-          />
-
           
-          <select 
-            className="w-full sm:w-1/2 p-3 border border-black bg-inherit rounded-lg opacity-80"
-            defaultValue="2"
-          >
-            <option value="2">2 persons</option>
-            <option value="4">4 persons</option>
-            <option value="6">6 persons</option>
-            <option value="8">8 persons</option>
-            <option value="10">10 persons</option>
-            <option value="12">12 persons</option>
-            <option value="14">14 persons</option>
-            <option value="16">16 persons</option>
-            <option value="18">18 persons</option>
-            <option value="20">20 persons</option>
-          </select>
-        </div>
+            <div className='w-1/2'>
+              <DatePicker
+                selected={startDate}
+                onChange={handleDateChange}
+                placeholderText="Pick a Date"
+                required
+                className="w-full p-3 border border-black rounded-lg bg-inherit focus:outline-none  placeholder-black opacity-80 block"
+                
+                  wrapperClassName="w-full"
+              />
+            </div>
+               <select
+       className="w-full sm:w-1/2 p-3 border border-black bg-inherit rounded-lg opacity-80"
+      value={selectedValue}
+      onChange={handleSelectChange}
+      required
+    >
+       <option value="" disabled>
+        Number of Persons
+      </option>
+      {options.map((option) => (
+        <option key={option} value={option}>
+          {option} persons
+        </option>
+      ))}
+      <option value="other">Other</option>
+    </select>
+         
+      
+      </div>
 
         <textarea 
+        required
           placeholder="Your Message" 
           className="w-full h-40 p-3 border border-black bg-inherit rounded-lg placeholder-black opacity-60"
         ></textarea>
@@ -136,7 +176,6 @@ const Booking = () => {
         </button>
       </form>
     </div>
-  
   </div>
        </div>
        <div className="m-0 p-0 ">

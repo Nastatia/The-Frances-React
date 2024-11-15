@@ -39,7 +39,7 @@ const About = () => {
                     <h5 className="text-xs text-rose-600 font-bold">01</h5>
                     <h4 className="font-bold">Delicious Food</h4>
                  </div>
-                 <p className="text-justify">
+                 <p className="text-justify  text-black opacity-70">
                   At The Frances, we believe that every meal should be a delightful experience.
                   Our menu is crafted with fresh ingredients and rich flavors, ensuring each dish is a burst of deliciousness. 
                   Whether you're craving breakfast, lunch, or dinner, our chefs bring creativity and passion to every plate.
@@ -53,7 +53,7 @@ const About = () => {
                    <h5 className="text-xs text-rose-600 font-bold">02</h5>
                    <h4  className="font-bold">Expert Chefs</h4>
                  </div>
-                  <p className="text-justify">
+                  <p className="text-justify  text-black opacity-70">
                    At The Frances, our team of expert chefs brings years of culinary experience to your plate. 
                    Each dish is thoughtfully crafted with precision, creativity, and passion, ensuring a remarkable dining experience. 
                    Whether you’re enjoying a classic favorite or a new gourmet creation, you can trust that every meal is made with top-quality ingredients and expert technique. 
@@ -66,7 +66,7 @@ const About = () => {
                    <h5 className="text-xs text-rose-600 font-bold">03</h5>
                    <h4  className="font-bold">Cozy Amibance</h4>
                  </div>
-                 <p className="text-justify">
+                 <p className="text-justify  text-black opacity-70">
                  The Frances offers more than just great food; we provide a warm and inviting atmosphere that makes every visit special. 
                  Whether you’re dining with friends, family, or colleagues, our cozy ambiance creates the perfect setting for meaningful conversations and memorable experiences.
                   From the elegant décor to the relaxing environment, you’ll feel right at home while enjoying exceptional service. 
@@ -79,7 +79,7 @@ const About = () => {
                    <h5 className="text-xs text-rose-600 font-bold">04</h5>
                     <h4  className="font-bold">Friendly Service</h4>
                  </div>
-                  <p className="text-justify">
+                  <p className="text-justify text-black opacity-70">
                   At The Frances, we believe that exceptional dining goes hand in hand with outstanding service. 
                   Our staff is dedicated to making you feel welcome from the moment you walk through the door. 
                   With warm smiles and attentive care, our team ensures that your every need is met. 

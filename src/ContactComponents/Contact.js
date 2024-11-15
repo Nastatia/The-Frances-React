@@ -67,12 +67,14 @@ const Contact = () => {
     <div className="w-full md:w-2/3">
       <form className="space-y-4">
         <div className="flex flex-col sm:flex-row gap-4">
-          <input 
+          <input
+          required 
             type="text" 
             placeholder="Your Name" 
             className="w-full p-3 border border-black bg-inherit rounded-lg placeholder-black  opacity-80" 
           />
           <input 
+          required
             type="email" 
             placeholder="Your Email" 
             className="w-full p-3 border border-black bg-inherit rounded-lg placeholder-black  opacity-80" 
@@ -80,12 +82,14 @@ const Contact = () => {
         </div>
 
         <input 
+        required
           type="text" 
           placeholder="Subject" 
           className="w-full p-3 border border-black bg-inherit rounded-lg placeholder-black opacity-80" 
         />
 
         <textarea 
+        required
           placeholder="Your Message" 
           className="w-full h-40 p-3 border border-black bg-inherit rounded-lg placeholder-black  opacity-80"
         ></textarea>
